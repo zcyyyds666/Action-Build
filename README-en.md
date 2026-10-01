@@ -1,6 +1,6 @@
 **`Enlish`** | [简体中文](README.md)
  
-[![Workflow Status](https://img.shields.io/github/actions/workflow/status/Numbersf/Action-Build/Build%20Kernel%20OnePlus.yml?branch=SukiSU-Ultra&label=Build&logo=github-actions&style=flat-square)](https://github.com/Numbersf/Action-Build/actions/workflows/Build%20Kernel%20OnePlus.yml?query=branch%3ASukiSU-Ultra)
+[![Workflow Status](https://img.shields.io/github/actions/workflow/status/Numbersf/Action-Build/Build%20Kernel%20OnePlus.yml?branch=SukiSU-Ultra&label=remote%20build&logo=github-actions&style=flat-square)](https://github.com/Numbersf/Action-Build/actions/workflows/Build%20Kernel%20OnePlus.yml?query=branch%3ASukiSU-Ultra) ![Downloads](https://img.shields.io/github/downloads/Numbersf/Action-Build/total)
  
 [![Kernel Manifest](https://img.shields.io/badge/Kernel%20Manifest-EB0029?logo=oneplus&logoColor=white&style=flat-square)](https://github.com/OnePlusOSS/kernel_manifest) [![Dynamic Kernel Manifest](https://img.shields.io/badge/Dynamic%20Kernel%20Manifest-EB0029?logo=oneplus&logoColor=white&style=flat-square)](https://github.com/Numbersf/kernel_manifest) [![Kernel Manifest Appendix](https://img.shields.io/badge/Kernel%20Manifest%20Appendix-EB0029?logo=oneplus&logoColor=white&style=flat-square)](https://github.com/Numbersf/Kernel_Manifest_Appendix) [![Fengchi Kernel](https://img.shields.io/badge/Fengchi%20Kernel-EB0029?logo=github&logoColor=white&style=flat-square)](https://github.com/Numbersf/SCHED_PATCH)
  
@@ -78,11 +78,9 @@ Prohibit the promotion of forked repositories with **no modifications**; see [LI
 >
 > If you have enabled the ``ZRAM`` algorithm, make sure to install the ``ZRAM`` module **before rebooting** after flashing with ``Anykernel3``. You may need to adjust some parameters manually.The 5.10 kernel is not supported ``ZRAM`` , as the ``zram.ko`` module path could not be found.However, the generated ``Anykernel3`` is still usable  
 >
->``MTK`` devices do not support enabling network feature extensions and do not support disabling fast build  
+>``MTK`` devices do not support disabling fast build  
 >
 >``OnePlus Ace5`` does not support enabling Fengchi. Older models cannot use it even if the kernel includes it — do not force it  
->
->``CAll Build Start UP`` is an **extremely dangerous** new workflow.**It has no new features and everything remains default and non-customizable**.This workflow is **strictly prohibited** for regular users and should use ``Build All OnePlus Kernels`` instead!  
 >
  
 ------
@@ -149,8 +147,6 @@ Regardless of whether the custom version identifier and fallback hash are enable
 - Fully automated retrieval of kernel information and build information.  
  
 - Allow modifying `SUBLEVEL`,Used to fix the issue where the device fails to boot after a system update changes the `SUBLEVEL` but the kernel source has not been updated.  
- 
-- Allows running multiple workflows in batches of `9` each time.Ordinary users are prohibited from using.  
  
 - Remove file-map and build method selection; let the main workflow decide automatically [@Bouteillepleine](https://github.com/Bouteillepleine)  
  
